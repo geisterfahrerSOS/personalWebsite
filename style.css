@@ -12,24 +12,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: black;
+    color: white;
 }
 
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffbe0b;
+    background-image: url(render01.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: transparent;
     padding-top: 20px;
     font-size: large;
 }
 
 .navBarWrapper {
-    /* width: 50%; */
-    background-color: white;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid grey;
 }
 
 .nameWrapper {
@@ -45,15 +47,19 @@ body {
 }
 
 .navBarItems>div {
-    border-top: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid transparent;
+    margin: 10px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navBarItems>div:hover {
+    border-bottom-color: white;
 }
 
 .navBarItems>div>a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 
@@ -73,11 +79,40 @@ body {
 }
 
 .timeLineWrapper {
-    border-right: 1px solid grey;
+    min-width: 200px;
     padding: 5px;
     padding-right: 15px;
     margin: 10px;
     flex: 2;
+    position: relative;
+}
+
+.timelineHeader {
+    font-size: large;
+    padding: 5px;
+}
+
+.leftTopCorner {
+    border-width: 5px 0px 0px 5px;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 50px
+}
+
+.rightBottomCorner {
+    transform-origin: bottom right;
+    border-width: 0px 5px 5px 0px;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    top: 27%;
+    left: 78%;
+    height: 50px;
+    width: 50px
 }
 
 .timeLineWrapper>ul {
@@ -105,8 +140,6 @@ body {
     margin: auto;
     margin-top: 30px;
     border-top: 1px solid grey;
-    background-color: white;
-    color: black;
 }
 
 .footerWrapper {
@@ -146,12 +179,15 @@ body {
     width: 75%;
 }
 
-.bottomFooter {
-    height: 20px;
-    background-color: #ffbe0b;
-}
+.bottomFooter {}
 
 .bottomFooterItems {
+    padding: 30px 5px 30px 5px;
+    border-top: 1px grey solid;
     display: flex;
     justify-content: space-between;
+}
+
+.lowerSpaceholder {
+    height: 30px;
 }
