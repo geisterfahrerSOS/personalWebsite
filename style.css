@@ -37,6 +37,12 @@ body {
 .nameWrapper {
     padding: 8px 0px 0px 100px;
     font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin: 10px 20px 0px 0px;
 }
 
 .navBarItems {
